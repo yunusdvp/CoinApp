@@ -1,0 +1,629 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4610453C2BE37C850096CC90 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4610453B2BE37C850096CC90 /* AppDelegate.swift */; };
+		4610453E2BE37C850096CC90 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4610453D2BE37C850096CC90 /* SceneDelegate.swift */; };
+		461045402BE37C850096CC90 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4610453F2BE37C850096CC90 /* ViewController.swift */; };
+		461045432BE37C850096CC90 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 461045422BE37C850096CC90 /* Base */; };
+		461045462BE37C850096CC90 /* CoinTakip.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 461045442BE37C850096CC90 /* CoinTakip.xcdatamodeld */; };
+		461045482BE37C880096CC90 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 461045472BE37C880096CC90 /* Assets.xcassets */; };
+		4610454B2BE37C880096CC90 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 4610454A2BE37C880096CC90 /* Base */; };
+		461045562BE37C880096CC90 /* CoinTakipTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461045552BE37C880096CC90 /* CoinTakipTests.swift */; };
+		461045602BE37C880096CC90 /* CoinTakipUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4610455F2BE37C880096CC90 /* CoinTakipUITests.swift */; };
+		461045622BE37C880096CC90 /* CoinTakipUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461045612BE37C880096CC90 /* CoinTakipUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		461045522BE37C880096CC90 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 461045302BE37C850096CC90 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 461045372BE37C850096CC90;
+			remoteInfo = CoinTakip;
+		};
+		4610455C2BE37C880096CC90 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 461045302BE37C850096CC90 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 461045372BE37C850096CC90;
+			remoteInfo = CoinTakip;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		461045382BE37C850096CC90 /* CoinTakip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoinTakip.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4610453B2BE37C850096CC90 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4610453D2BE37C850096CC90 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		4610453F2BE37C850096CC90 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		461045422BE37C850096CC90 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		461045452BE37C850096CC90 /* CoinTakip.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoinTakip.xcdatamodel; sourceTree = "<group>"; };
+		461045472BE37C880096CC90 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4610454A2BE37C880096CC90 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4610454C2BE37C880096CC90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		461045512BE37C880096CC90 /* CoinTakipTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoinTakipTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		461045552BE37C880096CC90 /* CoinTakipTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinTakipTests.swift; sourceTree = "<group>"; };
+		4610455B2BE37C880096CC90 /* CoinTakipUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoinTakipUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4610455F2BE37C880096CC90 /* CoinTakipUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinTakipUITests.swift; sourceTree = "<group>"; };
+		461045612BE37C880096CC90 /* CoinTakipUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinTakipUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		461045352BE37C850096CC90 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4610454E2BE37C880096CC90 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		461045582BE37C880096CC90 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4610452F2BE37C850096CC90 = {
+			isa = PBXGroup;
+			children = (
+				4610453A2BE37C850096CC90 /* CoinTakip */,
+				461045542BE37C880096CC90 /* CoinTakipTests */,
+				4610455E2BE37C880096CC90 /* CoinTakipUITests */,
+				461045392BE37C850096CC90 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		461045392BE37C850096CC90 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				461045382BE37C850096CC90 /* CoinTakip.app */,
+				461045512BE37C880096CC90 /* CoinTakipTests.xctest */,
+				4610455B2BE37C880096CC90 /* CoinTakipUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4610453A2BE37C850096CC90 /* CoinTakip */ = {
+			isa = PBXGroup;
+			children = (
+				4610453B2BE37C850096CC90 /* AppDelegate.swift */,
+				4610453D2BE37C850096CC90 /* SceneDelegate.swift */,
+				4610453F2BE37C850096CC90 /* ViewController.swift */,
+				461045412BE37C850096CC90 /* Main.storyboard */,
+				461045472BE37C880096CC90 /* Assets.xcassets */,
+				461045492BE37C880096CC90 /* LaunchScreen.storyboard */,
+				4610454C2BE37C880096CC90 /* Info.plist */,
+				461045442BE37C850096CC90 /* CoinTakip.xcdatamodeld */,
+			);
+			path = CoinTakip;
+			sourceTree = "<group>";
+		};
+		461045542BE37C880096CC90 /* CoinTakipTests */ = {
+			isa = PBXGroup;
+			children = (
+				461045552BE37C880096CC90 /* CoinTakipTests.swift */,
+			);
+			path = CoinTakipTests;
+			sourceTree = "<group>";
+		};
+		4610455E2BE37C880096CC90 /* CoinTakipUITests */ = {
+			isa = PBXGroup;
+			children = (
+				4610455F2BE37C880096CC90 /* CoinTakipUITests.swift */,
+				461045612BE37C880096CC90 /* CoinTakipUITestsLaunchTests.swift */,
+			);
+			path = CoinTakipUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		461045372BE37C850096CC90 /* CoinTakip */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 461045652BE37C880096CC90 /* Build configuration list for PBXNativeTarget "CoinTakip" */;
+			buildPhases = (
+				461045342BE37C850096CC90 /* Sources */,
+				461045352BE37C850096CC90 /* Frameworks */,
+				461045362BE37C850096CC90 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CoinTakip;
+			productName = CoinTakip;
+			productReference = 461045382BE37C850096CC90 /* CoinTakip.app */;
+			productType = "com.apple.product-type.application";
+		};
+		461045502BE37C880096CC90 /* CoinTakipTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 461045682BE37C880096CC90 /* Build configuration list for PBXNativeTarget "CoinTakipTests" */;
+			buildPhases = (
+				4610454D2BE37C880096CC90 /* Sources */,
+				4610454E2BE37C880096CC90 /* Frameworks */,
+				4610454F2BE37C880096CC90 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				461045532BE37C880096CC90 /* PBXTargetDependency */,
+			);
+			name = CoinTakipTests;
+			productName = CoinTakipTests;
+			productReference = 461045512BE37C880096CC90 /* CoinTakipTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		4610455A2BE37C880096CC90 /* CoinTakipUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4610456B2BE37C880096CC90 /* Build configuration list for PBXNativeTarget "CoinTakipUITests" */;
+			buildPhases = (
+				461045572BE37C880096CC90 /* Sources */,
+				461045582BE37C880096CC90 /* Frameworks */,
+				461045592BE37C880096CC90 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4610455D2BE37C880096CC90 /* PBXTargetDependency */,
+			);
+			name = CoinTakipUITests;
+			productName = CoinTakipUITests;
+			productReference = 4610455B2BE37C880096CC90 /* CoinTakipUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		461045302BE37C850096CC90 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1530;
+				LastUpgradeCheck = 1530;
+				TargetAttributes = {
+					461045372BE37C850096CC90 = {
+						CreatedOnToolsVersion = 15.3;
+					};
+					461045502BE37C880096CC90 = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = 461045372BE37C850096CC90;
+					};
+					4610455A2BE37C880096CC90 = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = 461045372BE37C850096CC90;
+					};
+				};
+			};
+			buildConfigurationList = 461045332BE37C850096CC90 /* Build configuration list for PBXProject "CoinTakip" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4610452F2BE37C850096CC90;
+			productRefGroup = 461045392BE37C850096CC90 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				461045372BE37C850096CC90 /* CoinTakip */,
+				461045502BE37C880096CC90 /* CoinTakipTests */,
+				4610455A2BE37C880096CC90 /* CoinTakipUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		461045362BE37C850096CC90 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				461045482BE37C880096CC90 /* Assets.xcassets in Resources */,
+				4610454B2BE37C880096CC90 /* Base in Resources */,
+				461045432BE37C850096CC90 /* Base in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4610454F2BE37C880096CC90 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		461045592BE37C880096CC90 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		461045342BE37C850096CC90 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				461045462BE37C850096CC90 /* CoinTakip.xcdatamodeld in Sources */,
+				461045402BE37C850096CC90 /* ViewController.swift in Sources */,
+				4610453C2BE37C850096CC90 /* AppDelegate.swift in Sources */,
+				4610453E2BE37C850096CC90 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4610454D2BE37C880096CC90 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				461045562BE37C880096CC90 /* CoinTakipTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		461045572BE37C880096CC90 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				461045602BE37C880096CC90 /* CoinTakipUITests.swift in Sources */,
+				461045622BE37C880096CC90 /* CoinTakipUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		461045532BE37C880096CC90 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 461045372BE37C850096CC90 /* CoinTakip */;
+			targetProxy = 461045522BE37C880096CC90 /* PBXContainerItemProxy */;
+		};
+		4610455D2BE37C880096CC90 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 461045372BE37C850096CC90 /* CoinTakip */;
+			targetProxy = 4610455C2BE37C880096CC90 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		461045412BE37C850096CC90 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				461045422BE37C850096CC90 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		461045492BE37C880096CC90 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4610454A2BE37C880096CC90 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		461045632BE37C880096CC90 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		461045642BE37C880096CC90 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		461045662BE37C880096CC90 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = H5Z575J4ZY;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CoinTakip/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = deneme.CoinTakip;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		461045672BE37C880096CC90 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = H5Z575J4ZY;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CoinTakip/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = deneme.CoinTakip;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		461045692BE37C880096CC90 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = H5Z575J4ZY;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = deneme.CoinTakipTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CoinTakip.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CoinTakip";
+			};
+			name = Debug;
+		};
+		4610456A2BE37C880096CC90 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = H5Z575J4ZY;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = deneme.CoinTakipTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CoinTakip.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CoinTakip";
+			};
+			name = Release;
+		};
+		4610456C2BE37C880096CC90 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = H5Z575J4ZY;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = deneme.CoinTakipUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CoinTakip;
+			};
+			name = Debug;
+		};
+		4610456D2BE37C880096CC90 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = H5Z575J4ZY;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = deneme.CoinTakipUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CoinTakip;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		461045332BE37C850096CC90 /* Build configuration list for PBXProject "CoinTakip" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				461045632BE37C880096CC90 /* Debug */,
+				461045642BE37C880096CC90 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		461045652BE37C880096CC90 /* Build configuration list for PBXNativeTarget "CoinTakip" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				461045662BE37C880096CC90 /* Debug */,
+				461045672BE37C880096CC90 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		461045682BE37C880096CC90 /* Build configuration list for PBXNativeTarget "CoinTakipTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				461045692BE37C880096CC90 /* Debug */,
+				4610456A2BE37C880096CC90 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4610456B2BE37C880096CC90 /* Build configuration list for PBXNativeTarget "CoinTakipUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4610456C2BE37C880096CC90 /* Debug */,
+				4610456D2BE37C880096CC90 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		461045442BE37C850096CC90 /* CoinTakip.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				461045452BE37C850096CC90 /* CoinTakip.xcdatamodel */,
+			);
+			currentVersion = 461045452BE37C850096CC90 /* CoinTakip.xcdatamodel */;
+			path = CoinTakip.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 461045302BE37C850096CC90 /* Project object */;
+}
