@@ -27,6 +27,13 @@
 		461045562BE37C880096CC90 /* CoinTakipTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461045552BE37C880096CC90 /* CoinTakipTests.swift */; };
 		461045602BE37C880096CC90 /* CoinTakipUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4610455F2BE37C880096CC90 /* CoinTakipUITests.swift */; };
 		461045622BE37C880096CC90 /* CoinTakipUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461045612BE37C880096CC90 /* CoinTakipUITestsLaunchTests.swift */; };
+		4645C2FA2BE4D64A00F4D941 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4645C2F92BE4D64A00F4D941 /* DetailViewController.swift */; };
+		468FD26E2BE39DC500F582F5 /* CoinCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468FD26C2BE39DC500F582F5 /* CoinCell.swift */; };
+		468FD26F2BE39DC500F582F5 /* CoinCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 468FD26D2BE39DC500F582F5 /* CoinCell.xib */; };
+		468FD2722BE39EA700F582F5 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 468FD2712BE39EA700F582F5 /* Kingfisher */; };
+		468FD2752BE3B63E00F582F5 /* SVGKit in Frameworks */ = {isa = PBXBuildFile; productRef = 468FD2742BE3B63E00F582F5 /* SVGKit */; };
+		468FD2772BE3B63E00F582F5 /* SVGKitSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 468FD2762BE3B63E00F582F5 /* SVGKitSwift */; };
+		468FD27A2BE3B66B00F582F5 /* UIView + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468FD2792BE3B66B00F582F5 /* UIView + Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +76,10 @@
 		4610455B2BE37C880096CC90 /* CoinTakipUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoinTakipUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4610455F2BE37C880096CC90 /* CoinTakipUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinTakipUITests.swift; sourceTree = "<group>"; };
 		461045612BE37C880096CC90 /* CoinTakipUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinTakipUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		4645C2F92BE4D64A00F4D941 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		468FD26C2BE39DC500F582F5 /* CoinCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinCell.swift; sourceTree = "<group>"; };
+		468FD26D2BE39DC500F582F5 /* CoinCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CoinCell.xib; sourceTree = "<group>"; };
+		468FD2792BE3B66B00F582F5 /* UIView + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,7 +87,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				468FD2722BE39EA700F582F5 /* Kingfisher in Frameworks */,
 				46101D9D2BE38B4900AD3B9B /* Alamofire in Frameworks */,
+				468FD2772BE3B63E00F582F5 /* SVGKitSwift in Frameworks */,
+				468FD2752BE3B63E00F582F5 /* SVGKit in Frameworks */,
 				46101D9F2BE38B4900AD3B9B /* AlamofireDynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -112,6 +126,8 @@
 		46101D932BE382CA00AD3B9B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				4645C2FB2BE4D75200F4D941 /* CustomViews */,
+				468FD26B2BE39DA800F582F5 /* Cells */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -119,6 +135,8 @@
 		46101D952BE382E500AD3B9B /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				4610453F2BE37C850096CC90 /* ViewController.swift */,
+				4645C2F92BE4D64A00F4D941 /* DetailViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -157,13 +175,13 @@
 		4610453A2BE37C850096CC90 /* CoinTakip */ = {
 			isa = PBXGroup;
 			children = (
+				468FD2782BE3B65200F582F5 /* Extension */,
 				46101D962BE3850400AD3B9B /* Network */,
 				46101D952BE382E500AD3B9B /* Controllers */,
 				46101D932BE382CA00AD3B9B /* Views */,
 				46101D8A2BE3810800AD3B9B /* Models */,
 				4610453B2BE37C850096CC90 /* AppDelegate.swift */,
 				4610453D2BE37C850096CC90 /* SceneDelegate.swift */,
-				4610453F2BE37C850096CC90 /* ViewController.swift */,
 				461045412BE37C850096CC90 /* Main.storyboard */,
 				461045472BE37C880096CC90 /* Assets.xcassets */,
 				461045492BE37C880096CC90 /* LaunchScreen.storyboard */,
@@ -190,6 +208,30 @@
 			path = CoinTakipUITests;
 			sourceTree = "<group>";
 		};
+		4645C2FB2BE4D75200F4D941 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		468FD26B2BE39DA800F582F5 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				468FD26C2BE39DC500F582F5 /* CoinCell.swift */,
+				468FD26D2BE39DC500F582F5 /* CoinCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		468FD2782BE3B65200F582F5 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				468FD2792BE3B66B00F582F5 /* UIView + Ext.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -209,6 +251,9 @@
 			packageProductDependencies = (
 				46101D9C2BE38B4900AD3B9B /* Alamofire */,
 				46101D9E2BE38B4900AD3B9B /* AlamofireDynamic */,
+				468FD2712BE39EA700F582F5 /* Kingfisher */,
+				468FD2742BE3B63E00F582F5 /* SVGKit */,
+				468FD2762BE3B63E00F582F5 /* SVGKitSwift */,
 			);
 			productName = CoinTakip;
 			productReference = 461045382BE37C850096CC90 /* CoinTakip.app */;
@@ -284,6 +329,8 @@
 			mainGroup = 4610452F2BE37C850096CC90;
 			packageReferences = (
 				46101D9B2BE38B4900AD3B9B /* XCRemoteSwiftPackageReference "Alamofire" */,
+				468FD2702BE39EA700F582F5 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				468FD2732BE3B63E00F582F5 /* XCRemoteSwiftPackageReference "SVGKit" */,
 			);
 			productRefGroup = 461045392BE37C850096CC90 /* Products */;
 			projectDirPath = "";
@@ -303,6 +350,7 @@
 			files = (
 				461045482BE37C880096CC90 /* Assets.xcassets in Resources */,
 				4610454B2BE37C880096CC90 /* Base in Resources */,
+				468FD26F2BE39DC500F582F5 /* CoinCell.xib in Resources */,
 				461045432BE37C850096CC90 /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -336,9 +384,12 @@
 				46101DA32BE38C7B00AD3B9B /* CoinLogic.swift in Sources */,
 				461045402BE37C850096CC90 /* ViewController.swift in Sources */,
 				4610453C2BE37C850096CC90 /* AppDelegate.swift in Sources */,
+				468FD27A2BE3B66B00F582F5 /* UIView + Ext.swift in Sources */,
 				46101D922BE381FC00AD3B9B /* Stats.swift in Sources */,
 				4610453E2BE37C850096CC90 /* SceneDelegate.swift in Sources */,
 				46101D902BE381E100AD3B9B /* Coin.swift in Sources */,
+				4645C2FA2BE4D64A00F4D941 /* DetailViewController.swift in Sources */,
+				468FD26E2BE39DC500F582F5 /* CoinCell.swift in Sources */,
 				46101D982BE3852C00AD3B9B /* CoinLogicProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -529,6 +580,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -557,6 +609,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -696,6 +749,22 @@
 				minimumVersion = 5.9.1;
 			};
 		};
+		468FD2702BE39EA700F582F5 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.11.0;
+			};
+		};
+		468FD2732BE3B63E00F582F5 /* XCRemoteSwiftPackageReference "SVGKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SVGKit/SVGKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -708,6 +777,21 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 46101D9B2BE38B4900AD3B9B /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = AlamofireDynamic;
+		};
+		468FD2712BE39EA700F582F5 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 468FD2702BE39EA700F582F5 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+		468FD2742BE3B63E00F582F5 /* SVGKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 468FD2732BE3B63E00F582F5 /* XCRemoteSwiftPackageReference "SVGKit" */;
+			productName = SVGKit;
+		};
+		468FD2762BE3B63E00F582F5 /* SVGKitSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 468FD2732BE3B63E00F582F5 /* XCRemoteSwiftPackageReference "SVGKit" */;
+			productName = SVGKitSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 

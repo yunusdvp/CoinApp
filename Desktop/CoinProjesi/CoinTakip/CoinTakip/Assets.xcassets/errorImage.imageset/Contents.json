@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "png-clipart-warning-sign-computer-icons-symbol-exclamation-mark-error-page-miscellaneous-angle.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
