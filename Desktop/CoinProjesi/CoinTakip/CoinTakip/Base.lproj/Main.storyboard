@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="qmy-hD-yh8">
-                                <rect key="frame" x="0.0" y="159" width="393" height="659"/>
+                                <rect key="frame" x="0.0" y="118" width="393" height="700"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="bSw-1i-t7p">
                                     <size key="itemSize" width="128" height="128"/>
@@ -28,14 +28,29 @@
                                 </collectionViewFlowLayout>
                                 <cells/>
                             </collectionView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KQi-Zw-op4">
+                                <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                                <items>
+                                    <navigationItem title="Title" id="bJs-uu-N8s">
+                                        <barButtonItem key="rightBarButtonItem" title="Sırala" id="G87-on-Rfc">
+                                            <connections>
+                                                <action selector="sortedBarButton:" destination="BYZ-38-t0r" id="OOV-jQ-6zo"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="qmy-hD-yh8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="0gX-8j-BDs"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="qmy-hD-yh8" secondAttribute="bottom" id="3bz-8h-GSf"/>
-                            <constraint firstItem="qmy-hD-yh8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="IXc-d8-ip1"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qmy-hD-yh8" secondAttribute="trailing" id="SJR-x6-ibh"/>
+                            <constraint firstItem="qmy-hD-yh8" firstAttribute="top" secondItem="KQi-Zw-op4" secondAttribute="bottom" constant="15" id="3pa-WK-xmT"/>
+                            <constraint firstItem="qmy-hD-yh8" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="A3a-yh-lNY"/>
+                            <constraint firstItem="KQi-Zw-op4" firstAttribute="trailing" secondItem="qmy-hD-yh8" secondAttribute="trailing" id="C8f-wk-lSR"/>
+                            <constraint firstItem="KQi-Zw-op4" firstAttribute="leading" secondItem="qmy-hD-yh8" secondAttribute="leading" id="LDA-Bo-GdT"/>
+                            <constraint firstItem="qmy-hD-yh8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="bFb-ft-nVz"/>
+                            <constraint firstItem="qmy-hD-yh8" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="beH-uW-NbO"/>
+                            <constraint firstItem="KQi-Zw-op4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="gti-cX-iBh"/>
                         </constraints>
                     </view>
                     <connections>
@@ -44,7 +59,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="60" y="-27"/>
+            <point key="canvasLocation" x="58.778625954198468" y="-27.464788732394368"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="MkS-EB-IgM">

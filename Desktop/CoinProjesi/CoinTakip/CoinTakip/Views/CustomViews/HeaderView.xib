@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="U6b-Vx-4bR" customClass="HeaderView" customModule="CoinTakip" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="489" height="55"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <view contentMode="scaleToFill" id="5he-JQ-ffk">
+                    <rect key="frame" x="0.0" y="0.0" width="611" height="55"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleAspectFit" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Yr7-Ge-CMP">
+                            <rect key="frame" x="0.0" y="0.0" width="606" height="21"/>
+                            <subviews>
+                                <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Piyasa Değeri" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SUd-5k-fQN">
+                                    <rect key="frame" x="0.0" y="0.0" width="200" height="21"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="200" id="8Eo-L8-iTP"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fiyat" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zp1-Jd-m4d">
+                                    <rect key="frame" x="205" y="0.0" width="110" height="21"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" relation="lessThanOrEqual" constant="120" id="xjG-ti-uaW"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="24h%" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bDC-bm-auc">
+                                    <rect key="frame" x="320" y="0.0" width="286" height="21"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="286" id="KfA-TM-qKz"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="SUd-5k-fQN" firstAttribute="leading" secondItem="Yr7-Ge-CMP" secondAttribute="leading" id="GHm-Zt-EsO"/>
+                            </constraints>
+                        </stackView>
+                    </subviews>
+                    <viewLayoutGuide key="safeArea" id="xIv-bb-3Da"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="Yr7-Ge-CMP" secondAttribute="trailing" constant="5" id="AXX-fE-cMH"/>
+                        <constraint firstItem="Yr7-Ge-CMP" firstAttribute="leading" secondItem="5he-JQ-ffk" secondAttribute="leading" id="MYO-On-kh1"/>
+                        <constraint firstItem="Yr7-Ge-CMP" firstAttribute="top" secondItem="5he-JQ-ffk" secondAttribute="top" id="PaD-bG-jfw"/>
+                        <constraint firstItem="xIv-bb-3Da" firstAttribute="bottom" secondItem="Yr7-Ge-CMP" secondAttribute="bottom" id="r4A-b5-Jmg"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="VXr-Tz-HHm"/>
+            <connections>
+                <outlet property="changeLabel" destination="bDC-bm-auc" id="na5-iL-t8P"/>
+                <outlet property="marketCapLabel" destination="SUd-5k-fQN" id="M7f-C2-d0g"/>
+                <outlet property="priceLabel" destination="zp1-Jd-m4d" id="gcs-ak-CO1"/>
+            </connections>
+            <point key="canvasLocation" x="203.81679389312976" y="-19.366197183098592"/>
+        </collectionReusableView>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

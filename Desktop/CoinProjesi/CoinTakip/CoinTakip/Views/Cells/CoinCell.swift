@@ -10,43 +10,41 @@ import Kingfisher
 
 class CoinCell: UICollectionViewCell {
     
-    @IBOutlet weak var coinImage: UIImageView!
-    @IBOutlet weak var coinSymbolLabel: UILabel!
-    @IBOutlet weak var coinNameLabel: UILabel!
-    @IBOutlet weak var coinPriceLabel: UILabel!
-    @IBOutlet weak var coinChangeLabel: UILabel!
+
+    @IBOutlet weak var coinView: CoinView!
+    @IBOutlet weak var priceLabel: UILabel!
+    @IBOutlet weak var changeLabel: UILabel!
     
     static let identifier = "CoinCell"
-    
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
     
-    public func configure(withModel model: Coin){
-        self.coinSymbolLabel.text = model.symbol
-        self.coinNameLabel.text = model.name
-        if let price = model.price{
-            let truncatedPrice = String(price.prefix(9))
-            self.coinPriceLabel.text = "$\(truncatedPrice)"
-        }
-        
-        self.coinChangeLabel.text = model.change
-        guard let url = URL(string: model.iconURL ?? "") else{
-            return
-        }
-        let placeholderImage = UIImage(named: "placeholder")
-        let errorImage = UIImage(named: "errorImage")
-        
-        guard let urlString = model.iconURL,
-              let url = URL(string: urlString) else{
-            self.coinImage.image = errorImage
-            return
-        }
-        self.coinImage.setImage(from: url,placeholder: placeholderImage)
-        
-    }
-    
+    public func configure(withModel model: Coin) {
+        coinView.coinNameLabel?.text = model.name ?? "Unknown"
+        coinView.marketCapLabel?.text = "$\(model.marketCap?.formattedWithAbbreviations() ?? "N/A")"
+           if let price = model.price {
+               let truncatedPrice = String(price.prefix(9))
+               priceLabel.text = "$\(truncatedPrice)"
+           } else {
+               priceLabel.text = "N/A"
+           }
+           if let change = model.change, let changeFirstChar = change.first {
+               changeLabel.textColor = changeFirstChar == "-" ? .red : .green
+               changeLabel.text = change
+           } else {
+               changeLabel.text = "N/A"
+           }
+           
+           let placeholderImage = UIImage(named: "placeholder")
+           let errorImage = UIImage(named: "errorImage") 
+           if let iconURL = model.iconURL, let url = URL(string: iconURL) {
+               coinView.imageView?.setImage(from: url,placeholder: placeholderImage)
+           } else {
+               coinView.imageView.image = errorImage
+           }
+       }
 }
       

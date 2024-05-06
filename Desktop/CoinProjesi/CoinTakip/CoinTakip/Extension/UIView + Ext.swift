@@ -24,7 +24,7 @@ extension UIImageView {
                 activityIndicator.stopAnimating()
                 activityIndicator.removeFromSuperview()
             } else {
-                DispatchQueue.global().async {
+                DispatchQueue.global(qos: .default).async {
                     if let svgImage = SVGKImage(contentsOf: url) {
                         let uiImage = svgImage.uiImage
                         UIImageView.svgCache.setObject(uiImage!, forKey: url.absoluteString as NSString)
