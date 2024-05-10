@@ -34,11 +34,16 @@ To install CoinTakip, please follow the instructions available at the GitHub rep
 ## Screenshots
 Here are some screenshots of the CoinTakip application in action:
 
-![Ekran Resmi 2024-05-10 16-06-20](https://i.ibb.co/cgBR0BK/Ekran-Resmi-2024-05-10-16-06-20.png)
-![Ekran Resmi 2024-05-10 16-06-35](https://i.ibb.co/4fh4N5z/Ekran-Resmi-2024-05-10-16-06-35.png)
-![Ekran Resmi 2024-05-10 16-06-53](https://i.ibb.co/gWYyYJG/Ekran-Resmi-2024-05-10-16-06-53.png)
-![Ekran Resmi 2024-05-10 16-07-02](https://i.ibb.co/nw3pWtd/Ekran-Resmi-2024-05-10-16-07-02.png)
-![Ekran Resmi 2024-05-10 16-07-16](https://i.ibb.co/DfxMK3d/Ekran-Resmi-2024-05-10-16-07-16.png)
+<img src="https://i.ibb.co/cgBR0BK/Ekran-Resmi-2024-05-10-16-06-20.png" alt="Ekran Resmi 2024-05-10 16-06-20" width="333" height="200">
+<img src="https://i.ibb.co/4fh4N5z/Ekran-Resmi-2024-05-10-16-06-35.png" alt="Ekran Resmi 2024-05-10 16-06-35" width="333" height="200">
+<img src="https://i.ibb.co/gWYyYJG/Ekran-Resmi-2024-05-10-16-06-53.png" alt="Ekran Resmi 2024-05-10 16-06-53" width="333" height="200">
+<img src="https://i.ibb.co/nw3pWtd/Ekran-Resmi-2024-05-10-16-07-02.png" alt="Ekran Resmi 2024-05-10 16-07-02" width="333" height="200">
+<img src="https://i.ibb.co/DfxMK3d/Ekran-Resmi-2024-05-10-16-07-16.png" alt="Ekran Resmi 2024-05-10 16-07-16" width="333" height="200">
+
+
+
+
+
 
 
 
