@@ -5,9 +5,7 @@
 //  Created by Yunus Emre ÖZŞAHİN on 2.05.2024.
 //
 
-import Foundation
-
-struct Stats: Codable {
+struct Stats: Decodable {
     let total, totalCoins, totalMarkets, totalExchanges: Int?
     let totalMarketCap, total24HVolume: String?
 

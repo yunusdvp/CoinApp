@@ -5,9 +5,7 @@
 //  Created by Yunus Emre ÖZŞAHİN on 2.05.2024.
 //
 
-import Foundation
-
-struct Coin: Codable {
+struct Coin: Decodable {
     let uuid, symbol, name: String?
     let color: String?
     let iconURL: String?

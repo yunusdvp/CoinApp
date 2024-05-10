@@ -1,21 +1,22 @@
 //
-//  CoinView.swift
+//  Coinstatistics CoinStatics.swift
 //  CoinTakip
 //
-//  Created by Yunus Emre ÖZŞAHİN on 5.05.2024.
+//  Created by Yunus Emre ÖZŞAHİN on 9.05.2024.
 //
 
 import UIKit
 
-class CoinView: UIView {
+class CoinStatistics: UIView {
 
     @IBOutlet weak var containerView: UIView!
-    @IBOutlet weak var marketCapLabel: UILabel!
-    @IBOutlet weak var coinNameLabel: UILabel!
-    @IBOutlet weak var imageView: UIImageView!
+    
+    @IBOutlet weak var valueLabel: UILabel!
+    @IBOutlet weak var signLabel: UILabel!
     private var view: UIView!
     override func awakeFromNib() {
         super.awakeFromNib()
+        setupBorder()
         
     }
     override init(frame: CGRect) {
@@ -27,10 +28,17 @@ class CoinView: UIView {
         super.init(coder: coder)
         self.configureView()
     }
+    private func setupBorder() {
+        layer.borderWidth = 0.4
+        layer.borderColor = UIColor.lightGray.cgColor
+        layer.cornerRadius = 10
+        layer.masksToBounds = true  
+    }
     private func loadViewFromNib() -> UIView! {
         let bundle = Bundle(for: type(of: self))
         let name = NSStringFromClass(self.classForCoder).components(separatedBy: ".").last!
         let nib = UINib(nibName: name, bundle: bundle)
+        
         let view = nib.instantiate(withOwner: self)[0] as! UIView
         
         return view
@@ -41,5 +49,11 @@ class CoinView: UIView {
         bounds = nibView.frame
         addSubview(nibView)
     }
+    func configure(name: String, value: String) {
+            signLabel.text = name
+            valueLabel.text = value
+        }
+    }
 
-}
+
+

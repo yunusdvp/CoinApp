@@ -7,6 +7,9 @@
 
 import UIKit
 
+protocol HeaderDelegate {
+    func didSelectHeaderSort(_ criteria: SortCriteria)
+}
 class HeaderView: UICollectionReusableView {
     @IBOutlet var marketCapLabel: UILabel!
     @IBOutlet var priceLabel: UILabel!
@@ -46,7 +49,7 @@ class HeaderView: UICollectionReusableView {
             delegate?.didSelectHeaderSort(newCriteria)
         }
 
-        private func resetSortIndicators(except currentLabel: UILabel) {
+        func resetSortIndicators(except currentLabel: UILabel) {
             for label in [marketCapLabel, priceLabel, changeLabel] {
                 if label != currentLabel {
                     let baseText = label?.text?.components(separatedBy: ["↑", "↓"]).first?.trimmingCharacters(in: .whitespaces) ?? ""
@@ -54,12 +57,9 @@ class HeaderView: UICollectionReusableView {
                 }
             }
         }
-
         func updateHeaderLabel(label: UILabel, isAscending: Bool) {
             let baseText = label.text?.components(separatedBy: ["↑", "↓"]).first?.trimmingCharacters(in: .whitespaces) ?? ""
             label.text = isAscending ? "\(baseText) ↑" : "\(baseText) ↓"
         }
     }
-protocol HeaderDelegate {
-    func didSelectHeaderSort(_ criteria: SortCriteria)
-}
+

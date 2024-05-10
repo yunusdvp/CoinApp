@@ -9,7 +9,6 @@ import UIKit
 import Kingfisher
 
 class CoinCell: UICollectionViewCell {
-    
 
     @IBOutlet weak var coinView: CoinView!
     @IBOutlet weak var priceLabel: UILabel!
@@ -19,25 +18,35 @@ class CoinCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        setupSeparatorView()
+        
     }
-    
+    private let separatorView: UIView = {
+            let view = UIView()
+            view.backgroundColor = .lightGray 
+            view.translatesAutoresizingMaskIntoConstraints = false
+            return view
+        }()
+    private func setupSeparatorView() {
+            contentView.addSubview(separatorView)
+            NSLayoutConstraint.activate([
+                separatorView.heightAnchor.constraint(equalToConstant: 1),
+                separatorView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
+                separatorView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
+                separatorView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)
+            ])
+        }
+
     public func configure(withModel model: Coin) {
         coinView.coinNameLabel?.text = model.name ?? "Unknown"
-        coinView.marketCapLabel?.text = "$\(model.marketCap?.formattedWithAbbreviations() ?? "N/A")"
+        coinView.marketCapLabel?.text = model.symbol ?? "N/A"
            if let price = model.price {
                let truncatedPrice = String(price.prefix(9))
-               priceLabel.text = "$\(truncatedPrice)"
+               priceLabel.text = truncatedPrice.asDollarCurrency
            } else {
                priceLabel.text = "N/A"
            }
-           if let change = model.change, let changeFirstChar = change.first {
-               changeLabel.textColor = changeFirstChar == "-" ? .red : .green
-               changeLabel.text = change
-           } else {
-               changeLabel.text = "N/A"
-           }
-           
+        changeLabel.setChangeTextAndColor(with: model.change, applyBackgroundChange: true)
            let placeholderImage = UIImage(named: "placeholder")
            let errorImage = UIImage(named: "errorImage") 
            if let iconURL = model.iconURL, let url = URL(string: iconURL) {

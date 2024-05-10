@@ -29,7 +29,6 @@ enum Router: URLRequestConvertible {
                 }
                 return url
     }
-    
     func asURLRequest() throws -> URLRequest {
         var urlRequest = URLRequest(url: url)
         urlRequest.httpMethod = method.rawValue

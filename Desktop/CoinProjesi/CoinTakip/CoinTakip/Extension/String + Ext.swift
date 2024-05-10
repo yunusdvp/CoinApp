@@ -12,7 +12,6 @@ extension String {
         guard let value = Double(self) else {
             return "N/A"
         }
-
         let numberFormatter = NumberFormatter()
         numberFormatter.numberStyle = .decimal
 
@@ -35,5 +34,28 @@ extension String {
         default:
             return numberFormatter.string(from: NSNumber(value: value)) ?? "N/A"
         }
+    }
+    func scientificNotationToDecimal() -> String {
+            guard let doubleValue = Double(self) else { return "N/A" }
+            let formatter = NumberFormatter()
+            formatter.numberStyle = .decimal
+            formatter.maximumFractionDigits = 20 
+            formatter.minimumFractionDigits = 0
+            return formatter.string(from: NSNumber(value: doubleValue)) ?? "N/A"
+        }
+    func orZero() -> Double {
+            return Double(self) ?? 0.0
+        }
+    var asDollarCurrency: String {
+            return "$\(self)"
+        }
+    var asBtcCurrency: String{
+        return "₿\(self)"
+    }
+    }
+
+extension Optional where Wrapped == String {
+    func orEmpty() -> String {
+        return self ?? ""
     }
 }

@@ -7,99 +7,124 @@
 
 import UIKit
 
-enum SortCriteria: Int {
-case priceAscending = 0
-case priceDescending = 1
-case marketCapAscending = 2
-case marketCapDescending = 3
-case volume24hAscending = 4
-case volume24hDescending = 5
-case changeAscending = 6
-case changeDescending = 7
-case listedAtAscending = 8
-case listedAtDescending = 9
-}
-
 class ViewController: UIViewController {
     var coinArray = [Coin]()
+    var filteredCoins = [Coin]()
     var sortState = [String: Bool]()
+    var emptyMessageLabel: UILabel!
+    @IBOutlet weak var segmentedControll: UISegmentedControl!
     @IBOutlet weak var coinCollectionView: UICollectionView!
     
+    @IBOutlet weak var pickerView: UIPickerView!
+    @IBOutlet weak var searchBar: UISearchBar!
+    let sortOptions = [
+        ("Fiyata Göre Artan", SortCriteria.priceAscending, "Price ↑"),
+        ("Fiyata Göre Azalan", SortCriteria.priceDescending, "Price ↓"),
+        ("Market Cap'e Göre Artan", SortCriteria.marketCapAscending, "Market Cap ↑"),
+        ("Market Cap'e Göre Azalan", SortCriteria.marketCapDescending, "Market Cap ↓"),
+        ("24h Volume'e Göre Artan", SortCriteria.volume24hAscending, "Volume 24h ↑"),
+        ("24h Volume'e Göre Azalan", SortCriteria.volume24hDescending, "Volume 24h ↓"),
+        ("Değişim Oranına Göre Artan", SortCriteria.changeAscending, "Change ↑"),
+        ("Değişim Oranına Göre Azalan", SortCriteria.changeDescending, "Change ↓"),
+        ("Listeleme Tarihine Göre En Eski", SortCriteria.listedAtAscending, "Listed At ↑"),
+        ("Listeleme Tarihine Göre En Yeni", SortCriteria.listedAtDescending, "Listed At ↓")
+    ]
     override func viewDidLoad() {
         super.viewDidLoad()
+        addDismissKeyboardTapGesture()
         fetchCoins()
-        coinCollectionView.dataSource = self
-        coinCollectionView.delegate = self
-        coinCollectionView.register(UINib(nibName: CoinCell.identifier, bundle: nil), forCellWithReuseIdentifier: CoinCell.identifier)
-        coinCollectionView.register(UINib(nibName: "HeaderView", bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: HeaderView.identifier)
+        setupSegmentedControl()
+        setupEmptyMessageLabel()
+        setupCollectionView()
+        setupPickerView()
+        reloadCoins()
+        NotificationCenter.default.addObserver(self, selector: #selector(reloadCoins), name: .favoritesUpdated, object: nil)
         
     }
-    func setupBarButton() {
-        let sortButton = UIBarButtonItem(title: "Sırala", style: .plain, target: self, action: #selector(showSortOptions))
-        navigationItem.rightBarButtonItem = sortButton
-    }
-    @objc func showSortOptions() {
-        let actionSheet = UIAlertController(title: "Sırala", message: "Coin'leri nasıl sıralamak istersiniz?", preferredStyle: .actionSheet)
-
-        // Sıralama seçenekleri ve handler'lar
-        let sortOptions = [
-            ("Fiyata Göre Artan", SortCriteria.priceAscending, "Price ↑"),
-            ("Fiyata Göre Azalan", SortCriteria.priceDescending, "Price ↓"),
-            ("Market Cap'e Göre Artan", SortCriteria.marketCapAscending, "Market Cap ↑"),
-            ("Market Cap'e Göre Azalan", SortCriteria.marketCapDescending, "Market Cap ↓"),
-            ("24h Volume'e Göre Artan", SortCriteria.volume24hAscending, "Volume 24h ↑"),
-            ("24h Volume'e Göre Azalan", SortCriteria.volume24hDescending, "Volume 24h ↓"),
-            ("Değişim Oranına Göre Artan", SortCriteria.changeAscending, "Change ↑"),
-            ("Değişim Oranına Göre Azalan", SortCriteria.changeDescending, "Change ↓"),
-            ("Listeleme Tarihine Göre En Eski", SortCriteria.listedAtAscending, "Listed At ↑"),
-            ("Listeleme Tarihine Göre En Yeni", SortCriteria.listedAtDescending, "Listed At ↓")
-        ]
-
-        for (title, criteria, navTitle) in sortOptions {
-            actionSheet.addAction(UIAlertAction(title: title, style: .default, handler: { [weak self] _ in
-                self?.sortCoins(by: criteria)
-                self?.navigationItem.title = navTitle
-            }))
-        }
-
-        actionSheet.addAction(UIAlertAction(title: "İptal", style: .cancel, handler: nil))
-
-        if let popoverController = actionSheet.popoverPresentationController {
-            popoverController.barButtonItem = navigationItem.rightBarButtonItem
-        }
-
-        present(actionSheet, animated: true, completion: nil)
+    deinit {
+        NotificationCenter.default.removeObserver(self)
     }
 
+    func setupSegmentedControl() {
+            segmentedControll.addTarget(self, action: #selector(segmentChanged(_:)), for: .valueChanged)
+        }
 
+    @objc func segmentChanged(_ sender: UISegmentedControl) {
+            reloadCoins()
+        }
+    func setupEmptyMessageLabel() {
+            emptyMessageLabel = UILabel(frame: CGRect(x: 0, y: 0, width: self.view.bounds.size.width, height: self.view.bounds.size.height))
+            emptyMessageLabel.text = "No coins available"
+            emptyMessageLabel.textColor = .gray
+        emptyMessageLabel.font = UIFont.systemFont(ofSize: 25)
+            emptyMessageLabel.textAlignment = .center
+            emptyMessageLabel.isHidden = true
+        
+            self.view.addSubview(emptyMessageLabel)
+        }
+    func setupCollectionView() {
+            coinCollectionView.dataSource = self
+            coinCollectionView.delegate = self
+            coinCollectionView.register(UINib(nibName: CoinCell.identifier, bundle: nil), forCellWithReuseIdentifier: CoinCell.identifier)
+        coinCollectionView.frame = CGRect(x: 0, y: 50, width: view.frame.width, height: view.frame.height - 50)
+            coinCollectionView.register(UINib(nibName: "HeaderView", bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: HeaderView.identifier)
+        
+        }
     
-    
+    @objc func reloadCoins() {
+            if segmentedControll.selectedSegmentIndex == 0 {
+                filteredCoins = coinArray
+            } else {
+                let favoriteCoinNames = CoreDataManager.shared.fetchFavoriteCoinNames()
+                filteredCoins = coinArray.filter { coin in
+                    favoriteCoinNames.contains(coin.name ?? "")
+                }
+            }
+            coinCollectionView.reloadData()
+            updateEmptyMessageVisibility()
+            
+        }
+
+    func updateEmptyMessageVisibility() {
+            emptyMessageLabel.isHidden = !filteredCoins.isEmpty
+        }
 
     func sortCoins(by criteria: SortCriteria) {
         switch criteria {
         case .priceAscending:
-            coinArray.sort(by: { Double($0.price ?? "") ?? 0 < Double($1.price ?? "") ?? 0 })
+            filteredCoins.sort(by: { $0.price.orEmpty().orZero() < $1.price.orEmpty().orZero() })
+            coinArray.sort(by: { $0.price.orEmpty().orZero() < $1.price.orEmpty().orZero() })
         case .priceDescending:
-            coinArray.sort(by: { Double($0.price ?? "") ?? 0 > Double($1.price ?? "") ?? 0 })
+            filteredCoins.sort(by: { $0.price.orEmpty().orZero() > $1.price.orEmpty().orZero() })
+            coinArray.sort(by: { $0.price.orEmpty().orZero() > $1.price.orEmpty().orZero() })
         case .marketCapAscending:
-            coinArray.sort(by: { Double($0.marketCap ?? "") ?? 0 < Double($1.marketCap ?? "") ?? 0 })
+            filteredCoins.sort(by: { $0.marketCap.orEmpty().orZero() < $1.marketCap.orEmpty().orZero() })
+            coinArray.sort(by: { $0.marketCap.orEmpty().orZero() < $1.marketCap.orEmpty().orZero() })
         case .marketCapDescending:
-            coinArray.sort(by: { Double($0.marketCap ?? "") ?? 0 > Double($1.marketCap ?? "") ?? 0 })
+            filteredCoins.sort(by: { $0.marketCap.orEmpty().orZero() > $1.marketCap.orEmpty().orZero() })
+            coinArray.sort(by: { $0.marketCap.orEmpty().orZero() > $1.marketCap.orEmpty().orZero() })
         case .volume24hAscending:
-            coinArray.sort(by: { Double($0.the24HVolume ?? "") ?? 0 < Double($1.the24HVolume ?? "") ?? 0 })
+            filteredCoins.sort(by: { $0.the24HVolume.orEmpty().orZero() < $1.the24HVolume.orEmpty().orZero() })
+            coinArray.sort(by: { $0.the24HVolume.orEmpty().orZero() < $1.the24HVolume.orEmpty().orZero() })
         case .volume24hDescending:
-            coinArray.sort(by: { Double($0.the24HVolume ?? "") ?? 0 > Double($1.the24HVolume ?? "") ?? 0 })
+            filteredCoins.sort(by: { $0.the24HVolume.orEmpty().orZero() > $1.the24HVolume.orEmpty().orZero() })
+            coinArray.sort(by: { $0.the24HVolume.orEmpty().orZero() > $1.the24HVolume.orEmpty().orZero() })
         case .changeAscending:
-            coinArray.sort(by: { Double($0.change ?? "") ?? 0 < Double($1.change ?? "") ?? 0 })
+            filteredCoins.sort(by: { $0.change.orEmpty().orZero() < $1.change.orEmpty().orZero() })
+            coinArray.sort(by: { $0.change.orEmpty().orZero() < $1.change.orEmpty().orZero() })
         case .changeDescending:
-            coinArray.sort(by: { Double($0.change ?? "") ?? 0 > Double($1.change ?? "") ?? 0 })
+            filteredCoins.sort(by: { $0.change.orEmpty().orZero() > $1.change.orEmpty().orZero() })
+            coinArray.sort(by: { $0.change.orEmpty().orZero() > $1.change.orEmpty().orZero() })
         case .listedAtAscending:
-            coinArray.sort(by: { ($0.listedAt ?? 0) < ($1.listedAt ?? 0) })
+            filteredCoins.sort(by: { ($0.listedAt.orZero()) < ($1.listedAt.orZero()) })
+            coinArray.sort(by: { ($0.listedAt.orZero()) < ($1.listedAt.orZero()) })
         case .listedAtDescending:
-            coinArray.sort(by: { ($0.listedAt ?? 0) > ($1.listedAt ?? 0) })
+            filteredCoins.sort(by: { ($0.listedAt.orZero()) > ($1.listedAt.orZero()) })
+            coinArray.sort(by: { ($0.listedAt.orZero()) > ($1.listedAt.orZero()) })
         }
         coinCollectionView.reloadData()
     }
+
 
     func fetchCoins() {
         CoinLogic.shared.getCoins { [weak self] result in
@@ -108,8 +133,8 @@ class ViewController: UIViewController {
                 case .success(let welcome):
                     if let coins = welcome.data?.coins {
                         self?.coinArray = coins
+                        self?.reloadCoins()
                         print("Toplam coin sayısı: \(coins.count)")
-                        self?.coinCollectionView.reloadData()
                     } else {
                         print("Coin listesi alınamadı")
                     }
@@ -121,13 +146,21 @@ class ViewController: UIViewController {
     }
     
     @IBAction func sortedBarButton(_ sender: UIBarButtonItem) {
-        showSortOptions()
+        UIView.animate(withDuration: 0.3) {
+                self.pickerView.frame = CGRect(x: 0, y: self.view.frame.height - 216, width: self.view.frame.width, height: 216)
+            }
+        }
+    func hidePickerView() {
+        UIView.animate(withDuration: 0.7) {
+            self.pickerView.frame = CGRect(x: 0, y: self.view.frame.height, width: self.view.frame.width, height: 216)
+        }
     }
-}
+    }
+
 
 extension ViewController: UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        coinArray.count
+        filteredCoins.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -135,8 +168,23 @@ extension ViewController: UICollectionViewDelegate,UICollectionViewDataSource,UI
         else{
             return UICollectionViewCell()
         }
-        cell.configure(withModel: coinArray[indexPath.row])
+        cell.configure(withModel: filteredCoins[indexPath.row])
         return cell
+    }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+            let selectedCoin = filteredCoins[indexPath.row]
+            showDetails(for: selectedCoin)
+        }
+
+    func showDetails(for coin: Coin) {
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        if let detailVC = storyboard.instantiateViewController(withIdentifier: "DetailViewController") as? DetailViewController {
+            detailVC.coin = coin
+            navigationController?.pushViewController(detailVC, animated: true)
+        } else {
+            print("DetailViewController couldn't be instantiated.")
+        }
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
         return CGSize(width: collectionView.bounds.width, height: 40)
@@ -151,9 +199,6 @@ extension ViewController: UICollectionViewDelegate,UICollectionViewDataSource,UI
         header.delegate = self
         return header
     }
-
-
-    
     
 }
 extension ViewController: HeaderDelegate {
@@ -162,5 +207,39 @@ extension ViewController: HeaderDelegate {
         coinCollectionView.reloadData()
     }
 }
+extension ViewController : UISearchBarDelegate{
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        filteredCoins = searchText.isEmpty ? coinArray : coinArray.filter { $0.name?.lowercased().contains(searchText.lowercased()) ?? false }
+            coinCollectionView.reloadData()
+            updateEmptyMessageVisibility()
+        }
+}
 
+extension ViewController: UIPickerViewDelegate, UIPickerViewDataSource{
+    func setupPickerView() {
+            pickerView.delegate = self
+            pickerView.dataSource = self
+            pickerView.frame = CGRect(x: 0, y: view.frame.height, width: view.frame.width, height: 216)
+        pickerView.backgroundColor = UIColor.white
+            view.addSubview(pickerView)
+        }
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+            return 1
+        }
 
+        func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+            return sortOptions.count
+        }
+
+        
+        func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+            return sortOptions[row].0
+        }
+
+        func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+            let criteria = sortOptions[row].1
+            sortCoins(by: criteria)
+            hidePickerView()
+            navigationItem.title = sortOptions[row].0
+        }
+}
