@@ -116,6 +116,7 @@
 		46B8A8572BEE04820036FB5C /* SortCriteria.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortCriteria.swift; sourceTree = "<group>"; };
 		46B8A8592BEE120B0036FB5C /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
 		46B8A85B2BEE42160036FB5C /* Notification + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification + Ext.swift"; sourceTree = "<group>"; };
+		46B8A85F2BEE55240036FB5C /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,6 +192,7 @@
 		4610452F2BE37C850096CC90 = {
 			isa = PBXGroup;
 			children = (
+				46B8A85F2BEE55240036FB5C /* README.md */,
 				4610453A2BE37C850096CC90 /* CoinTakip */,
 				461045542BE37C880096CC90 /* CoinTakipTests */,
 				4610455E2BE37C880096CC90 /* CoinTakipUITests */,

@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Title-->
+        <!--CoinTakip-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CoinTakip" customModuleProvider="target" sceneMemberID="viewController">
@@ -71,7 +71,7 @@
                             <constraint firstItem="kd3-OA-Ody" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="12" id="r8b-ZG-u7f"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="bJs-uu-N8s">
+                    <navigationItem key="navigationItem" title="CoinTakip" id="bJs-uu-N8s">
                         <barButtonItem key="rightBarButtonItem" image="line.3.horizontal.decrease" catalog="system" id="G87-on-Rfc">
                             <connections>
                                 <action selector="sortedBarButton:" destination="BYZ-38-t0r" id="OOV-jQ-6zo"/>
