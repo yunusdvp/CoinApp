@@ -6,7 +6,7 @@
 ## Table of Contents
 - [Installation](#installation)
 - [Features](#features)
-- [Tech Stack](#techstack)
+- [TechStack](#techstack)
 - [Dependencies](#dependencies)
 - [Screenshots](#screenshots)
 - [Contributing](#contributing)
@@ -21,10 +21,11 @@ To install CoinTakip, please follow the instructions available at the GitHub rep
 - Ability to track favorite coins and their price changes.
 - Market trend analysis tools integrated within the application.
 
-## Tech Stack
+## TechStack
 - Xcode: Version 15.3
 - Language: Swift 5.10
 - Minimum iOS Version: 16.0
+
 ## Dependencies
 - **Alamofire**: Used for handling network requests.
 - **KingFisher**: Used for image caching and downloading.
