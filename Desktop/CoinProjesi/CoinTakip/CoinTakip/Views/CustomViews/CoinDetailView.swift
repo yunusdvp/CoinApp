@@ -53,8 +53,8 @@ class CoinDetailView: UIView {
 
             if let minValue = model.sparkline?.compactMap(Double.init).min(),
                let maxValue = model.sparkline?.compactMap(Double.init).max() {
-                minValueView.configure(name: "Min", value: String(format: "$%.2f", minValue))
-                maxValueView.configure(name: "Max", value: String(format: "$%.2f", maxValue))
+                minValueView.configure(name: "Min", value: String(String(format: "$%.8f", minValue).prefix(10)))
+                maxValueView.configure(name: "Max", value: String(String(format: "$%.8f", maxValue).prefix(10)))
             }
     }
     

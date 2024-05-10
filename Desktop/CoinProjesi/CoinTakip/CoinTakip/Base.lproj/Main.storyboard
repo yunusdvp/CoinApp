@@ -97,8 +97,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YhT-8l-bpS">
-                                <rect key="frame" x="0.0" y="103" width="393" height="643"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YhT-8l-bpS">
+                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
                                 <subviews>
                                     <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="99e-YM-EYZ" customClass="DetailHeaderView" customModule="CoinTakip" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="126"/>
@@ -149,7 +149,7 @@
                                     <constraint firstItem="YuU-cn-gVr" firstAttribute="trailing" secondItem="28V-jt-uHZ" secondAttribute="trailing" constant="4" id="btX-Og-wQ7"/>
                                     <constraint firstItem="YuU-cn-gVr" firstAttribute="trailing" secondItem="99e-YM-EYZ" secondAttribute="trailing" id="eVc-jX-EVC"/>
                                     <constraint firstItem="xQA-Fl-QUp" firstAttribute="top" secondItem="28V-jt-uHZ" secondAttribute="bottom" constant="15" id="qk9-la-ggj"/>
-                                    <constraint firstAttribute="bottom" relation="lessThanOrEqual" secondItem="xQA-Fl-QUp" secondAttribute="bottom" constant="49" id="vlg-8r-WkF"/>
+                                    <constraint firstAttribute="bottom" secondItem="xQA-Fl-QUp" secondAttribute="bottom" id="vlg-8r-WkF"/>
                                 </constraints>
                                 <viewLayoutGuide key="contentLayoutGuide" id="qxi-8f-uDS"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="YuU-cn-gVr"/>

@@ -65,7 +65,7 @@ class DetailHeaderView: UIView {
         }
         if let minValue = model.sparkline?.compactMap(Double.init).min(),
            let maxValue = model.sparkline?.compactMap(Double.init).max(){
-            let changeDetail = "\(model.change ?? "") $\(Float(maxValue-minValue))"
+            let changeDetail = "\(model.change ?? "") $\(String(format: "%.8f", maxValue - minValue))"
             changeLabel.setChangeTextAndColor(with: changeDetail)
             
         }
