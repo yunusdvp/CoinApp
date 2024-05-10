@@ -19,6 +19,7 @@ class DetailHeaderView: UIView {
     
     @IBOutlet weak var changeLabel: UILabel!
     
+    @IBOutlet weak var changeValueLabel: UILabel!
     private var view: UIView!
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -65,8 +66,10 @@ class DetailHeaderView: UIView {
         }
         if let minValue = model.sparkline?.compactMap(Double.init).min(),
            let maxValue = model.sparkline?.compactMap(Double.init).max(){
-            let changeDetail = "\(model.change ?? "") $\(String(format: "%.8f", maxValue - minValue))"
-            changeLabel.setChangeTextAndColor(with: changeDetail)
+            //let changeDetail = "\(model.change ?? "")
+            changeLabel.setChangeTextAndColor(with: model.change)
+            changeValueLabel.textColor = changeLabel.textColor
+            changeValueLabel.text = "\(String(format: "$%.8f", maxValue - minValue).prefix(10))"
             
         }
         

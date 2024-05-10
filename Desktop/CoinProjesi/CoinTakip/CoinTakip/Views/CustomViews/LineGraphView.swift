@@ -152,7 +152,7 @@ class LineGraphView: UIView {
         let touchPoint = touch.location(in: self)
         for (index, point) in points.enumerated() {
             if abs(touchPoint.x - point.x) < 10 && abs(touchPoint.y - point.y) < 10 {
-                valueLabel.text = "\(String(values[index]).asDollarCurrency)"
+                valueLabel.text = "\(values[index])".asDollarCurrency
                 valueLabel.center = CGPoint(x: point.x, y: point.y - 20)
                 valueLabel.isHidden = false
                 valueLabel.numberOfLines = 0
