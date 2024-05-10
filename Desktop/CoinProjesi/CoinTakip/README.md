@@ -1,33 +1,45 @@
-<h1 align="center" id="title">CoinTakip</h1>
+# CoinTakip
 
-<p id="description">CoinTakip is a user-friendly application that helps you take a firm step in the cryptocurrency market. Equipped with real-time market data CoinTakip covers a wide range of cryptocurrencies and offers users the opportunity to track their favorite coins track price changes and analyze market trends. With its simple interface and user-oriented features CoinTakip aims to be an indispensable tool for cryptocurrency investors. Exploring and following the cryptocurrency world has never been easier. Keep your finger on the pulse of the crypto world with CoinTakip!</p>
+## Introduction
+**CoinTakip** is a user-friendly application that helps you take a firm step in the cryptocurrency market. Equipped with real-time market data, CoinTakip covers a wide range of cryptocurrencies and offers users the opportunity to track their favorite coins, track price changes, and analyze market trends. With its simple interface and user-oriented features, CoinTakip aims to be an indispensable tool for cryptocurrency investors. Exploring and following the cryptocurrency world has never been easier. Keep your finger on the pulse of the crypto world with CoinTakip!
 
-<h2>Project Screenshots:</h2>
+## Table of Contents
+- [Installation](#installation)
+- [Features](#features)
+- [Dependencies](#dependencies)
+- [Screenshots](#screenshots)
+- [Contributing](#contributing)
+- [License](#license)
 
-<img src="<a href=" https:="" ibb.co="" f4sy7gp"="">
+## Installation
+To install CoinTakip, please follow the instructions available at the GitHub repository:
+[CoinTakip Installation Guide](https://github.com/yunusdvp/CoinApp/tree/main)
 
-<img src="https://i.ibb.co/DfxMK3d/Ekran-Resmi-2024-05-10-16-07-16.png" alt="Ekran-Resmi-2024-05-10-16-07-16" border="0">
+## Features
+- Real-time market data of a wide range of cryptocurrencies.
+- Ability to track favorite coins and their price changes.
+- Market trend analysis tools integrated within the application.
 
-" alt="project-screenshot" width=100 height=200/><img src="<a href=" https:="" ibb.co="" sg57bzx"="">
+## Dependencies
+- **Alamofire**: Used for handling network requests.
+- **KingFisher**: Used for image caching and downloading.
+- **SVGKit**: Used for SVG image processing.
 
-<img src="https://i.ibb.co/nw3pWtd/Ekran-Resmi-2024-05-10-16-07-02.png" alt="Ekran-Resmi-2024-05-10-16-07-02" border="0">
+## Screenshots
+Here are some screenshots of the CoinTakip application in action:
 
-" alt="project-screenshot" width=100 height=200/><img src="<a href=" https:="" ibb.co="" s17j7qh"="">
+![Ekran Resmi 2024-05-10 16-06-20](https://i.ibb.co/cgBR0BK/Ekran-Resmi-2024-05-10-16-06-20.png)
+![Ekran Resmi 2024-05-10 16-06-35](https://i.ibb.co/4fh4N5z/Ekran-Resmi-2024-05-10-16-06-35.png)
+![Ekran Resmi 2024-05-10 16-06-53](https://i.ibb.co/gWYyYJG/Ekran-Resmi-2024-05-10-16-06-53.png)
+![Ekran Resmi 2024-05-10 16-07-02](https://i.ibb.co/nw3pWtd/Ekran-Resmi-2024-05-10-16-07-02.png)
+![Ekran Resmi 2024-05-10 16-07-16](https://i.ibb.co/DfxMK3d/Ekran-Resmi-2024-05-10-16-07-16.png)
 
-<img src="https://i.ibb.co/gWYyYJG/Ekran-Resmi-2024-05-10-16-06-53.png" alt="Ekran-Resmi-2024-05-10-16-06-53" border="0">
 
-" alt="project-screenshot" width=100 height=200/><img src="<a href=" https:="" ibb.co="" jddrkmv"="">
 
-<img src="https://i.ibb.co/4fh4N5z/Ekran-Resmi-2024-05-10-16-06-35.png" alt="Ekran-Resmi-2024-05-10-16-06-35" border="0">
 
-" alt="project-screenshot" width=100 height=200/><img src="<a href=" https:="" ibb.co="" hfsr6sl"="">
 
-<img src="https://i.ibb.co/cgBR0BK/Ekran-Resmi-2024-05-10-16-06-20.png" alt="Ekran-Resmi-2024-05-10-16-06-20" border="0">
+## Contributing
+If you are interested in contributing to the development of CoinTakip, please refer to the project's GitHub repository.
 
-" alt="project-screenshot" width=100 height=200/>
-
-  
-  
-<h2>🧐 Features</h2>
-
-Here're some of the project's best features:
+## License
+CoinTakip is released under the MIT License. See the LICENSE file in the GitHub repository for more details.

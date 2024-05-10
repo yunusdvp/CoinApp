@@ -93,7 +93,7 @@
         <scene sceneID="MkS-EB-IgM">
             <objects>
                 <viewController storyboardIdentifier="DetailViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="uAI-yA-JWB" customClass="DetailViewController" customModule="CoinTakip" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="T61-zJ-zY3">
+                    <view key="view" contentMode="scaleToFill" id="T61-zJ-zY3">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -140,6 +140,7 @@
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="xQA-Fl-QUp" secondAttribute="trailing" id="2fZ-A1-lpz"/>
                                     <constraint firstItem="xQA-Fl-QUp" firstAttribute="trailing" secondItem="YuU-cn-gVr" secondAttribute="trailing" id="3aI-de-w1G"/>
+                                    <constraint firstItem="xQA-Fl-QUp" firstAttribute="top" secondItem="28V-jt-uHZ" secondAttribute="bottom" constant="15" id="7Yv-7y-JXa"/>
                                     <constraint firstItem="99e-YM-EYZ" firstAttribute="leading" secondItem="YuU-cn-gVr" secondAttribute="leading" id="MDg-48-ZvU"/>
                                     <constraint firstItem="28V-jt-uHZ" firstAttribute="top" secondItem="99e-YM-EYZ" secondAttribute="bottom" constant="10" id="Nq9-Mb-2RU"/>
                                     <constraint firstItem="99e-YM-EYZ" firstAttribute="top" secondItem="YuU-cn-gVr" secondAttribute="top" id="O4B-38-qdg"/>
@@ -147,8 +148,8 @@
                                     <constraint firstItem="xQA-Fl-QUp" firstAttribute="leading" secondItem="YuU-cn-gVr" secondAttribute="leading" id="UI0-tX-2VJ"/>
                                     <constraint firstItem="YuU-cn-gVr" firstAttribute="trailing" secondItem="28V-jt-uHZ" secondAttribute="trailing" constant="4" id="btX-Og-wQ7"/>
                                     <constraint firstItem="YuU-cn-gVr" firstAttribute="trailing" secondItem="99e-YM-EYZ" secondAttribute="trailing" id="eVc-jX-EVC"/>
-                                    <constraint firstAttribute="height" constant="800" id="eic-es-QqM"/>
                                     <constraint firstItem="xQA-Fl-QUp" firstAttribute="top" secondItem="28V-jt-uHZ" secondAttribute="bottom" constant="15" id="qk9-la-ggj"/>
+                                    <constraint firstAttribute="bottom" relation="lessThanOrEqual" secondItem="xQA-Fl-QUp" secondAttribute="bottom" constant="49" id="vlg-8r-WkF"/>
                                 </constraints>
                                 <viewLayoutGuide key="contentLayoutGuide" id="qxi-8f-uDS"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="YuU-cn-gVr"/>

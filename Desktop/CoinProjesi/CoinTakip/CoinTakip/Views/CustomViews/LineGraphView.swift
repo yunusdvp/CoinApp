@@ -31,7 +31,7 @@ class LineGraphView: UIView {
     }
 
     private func setupValueLabel() {
-        valueLabel.frame = CGRect(x: 0, y: 0, width: 100, height: 20)
+        valueLabel.frame = CGRect(x: 0, y: 0, width: 150, height: 20)
         valueLabel.backgroundColor = .white
         valueLabel.textColor = .black
         valueLabel.textAlignment = .center
@@ -137,7 +137,6 @@ class LineGraphView: UIView {
             .font: UIFont.systemFont(ofSize: 12),
             .foregroundColor: UIColor.black
         ]
-        let stepX = (bounds.width - 40) / CGFloat(points.count - 1)
 
         for (index, point) in points.enumerated() {
             let hourString = "\(index + 1)"
@@ -153,9 +152,10 @@ class LineGraphView: UIView {
         let touchPoint = touch.location(in: self)
         for (index, point) in points.enumerated() {
             if abs(touchPoint.x - point.x) < 10 && abs(touchPoint.y - point.y) < 10 {
-                valueLabel.text = "\(String(values[index]).asDollarCurrency.prefix(9))"
+                valueLabel.text = "\(String(values[index]).asDollarCurrency)"
                 valueLabel.center = CGPoint(x: point.x, y: point.y - 20)
                 valueLabel.isHidden = false
+                valueLabel.numberOfLines = 0
                 break
             }
         }
